@@ -267,7 +267,7 @@ export default {
       console.log("Payment closed");
     },
     getCourses() {
-      const path = "http://localhost:5000/courses";
+      const path = "http://192.168.0.113:5000/courses";
       axios
         .get(path)
         .then((res) => {
@@ -278,7 +278,7 @@ export default {
         });
     },
     addCourse(payload) {
-      const path = "http://localhost:5000/courses";
+      const path = "http://192.168.0.113:5000/courses";
       axios
         .post(path, payload)
         .then(() => {
@@ -292,7 +292,7 @@ export default {
         });
     },
     removeCourse(courseID) {
-      const path = `http://localhost:5000/courses/${courseID}`;
+      const path = `http://192.168.0.113:5000/courses/${courseID}`;
       axios
         .delete(path)
         .then(() => {
@@ -336,7 +336,7 @@ export default {
       this.updateCourse(payload, this.editForm.id);
     },
     updateCourse(payload, courseID) {
-      const path = `http://localhost:5000/courses/${courseID}`;
+      const path = `http://192.168.0.113:5000//${courseID}`;
       axios
         .put(path, payload)
         .then(() => {
